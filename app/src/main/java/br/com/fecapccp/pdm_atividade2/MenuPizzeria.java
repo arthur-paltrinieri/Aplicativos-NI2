@@ -3,53 +3,38 @@ package br.com.fecapccp.pdm_atividade2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.CheckBox;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
 
 public class MenuPizzeria extends AppCompatActivity {
 
-    CheckBox calabresa, margherita, portuguesa, vegana, casa;
-    Button btnContinuar;
+    private RadioGroup pizzaGroup;
+    private Button btnContinuar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_pizzeria);
 
-        // Inicialização dos componentes
-        calabresa = findViewById(R.id.calabresa);
-        margherita = findViewById(R.id.margherita);
-        portuguesa = findViewById(R.id.portuguesa);
-        vegana = findViewById(R.id.vegana);
-        casa = findViewById(R.id.casa);
+        pizzaGroup = findViewById(R.id.radioGroupPizzas);
         btnContinuar = findViewById(R.id.button);
 
         btnContinuar.setOnClickListener(v -> {
-            ArrayList<String> pizzas = new ArrayList<>();
+            int selectedId = pizzaGroup.getCheckedRadioButtonId();
 
-            if (calabresa.isChecked()) pizzas.add("Calabresa");
-            if (margherita.isChecked()) pizzas.add("Margherita");
-            if (portuguesa.isChecked()) pizzas.add("Portuguesa");
-            if (vegana.isChecked()) pizzas.add("Vegana");
-            if (casa.isChecked()) pizzas.add("Da Casa");
-
-            if (pizzas.isEmpty()) {
-                Toast.makeText(this, "Selecione pelo menos uma pizza", Toast.LENGTH_SHORT).show();
+            if(selectedId == -1) {
+                Toast.makeText(this, "Selecione um sabor de pizza", Toast.LENGTH_SHORT).show();
                 return;
             }
 
-            try {
-                Intent intent = new Intent(this, propriedades_pizzeria.class);
-                intent.putStringArrayListExtra("pizzasSelecionadas", pizzas);
-                startActivity(intent);
-            } catch (Exception e) {
-                Toast.makeText(this, "Erro ao abrir próxima tela", Toast.LENGTH_SHORT).show();
-                e.printStackTrace();
-            }
+            RadioButton selected = findViewById(selectedId);
+            String pizzaSelecionada = selected.getText().toString();
+
+            Intent intent = new Intent(this, propriedades_pizzeria.class);
+            intent.putExtra("pizzaSelecionada", pizzaSelecionada);
+            startActivity(intent);
         });
     }
 }

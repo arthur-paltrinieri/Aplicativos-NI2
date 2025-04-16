@@ -111,23 +111,19 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/continuar"
-        android:padding="8dp"
-        android:textSize="20dp"
-        android:backgroundTint="@color/App5Sub"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9"
-        android:layout_marginHorizontal="24dp"/>
-
-
-
-
+    android:id="@+id/btnContinuar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/continuar"
+    android:padding="8dp"
+    android:textSize="20dp"
+    android:backgroundTint="@color/App5Sub"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.9"
+    android:layout_marginHorizontal="24dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

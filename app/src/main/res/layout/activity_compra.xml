@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:background="@color/bgcolor1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Compra">
+
+    <TextView
+        android:id="@+id/Top"
+        android:background="@color/headercolor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/SisCompras"
+        android:background="@color/headercolor1"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Titulo1"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/SisDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:text="@string/Subtitulo1" />
+
+    <CheckBox
+        android:id="@+id/op1"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option1" />
+    <CheckBox
+        android:id="@+id/op2"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option2" />
+    <CheckBox
+        android:id="@+id/op3"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option3" />
+    <CheckBox
+        android:id="@+id/op4"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option4" />
+    <CheckBox
+        android:id="@+id/op5"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option5" />
+
+    <Button
+        android:id="@+id/calcular"
+        android:textSize="24dp"
+        android:padding="4dp"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/headercolor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Calcular1" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Resultado1"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="24dp"/>
+
+    <TextView
+        android:id="@+id/redirectMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="270dp"
+        android:textColor="@color/white"
+        android:text="@string/Menu" />
+
+
+</LinearLayout>

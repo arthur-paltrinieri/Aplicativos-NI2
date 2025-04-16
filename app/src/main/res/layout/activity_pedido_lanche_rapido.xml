@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Top"
+        android:background="@color/App4Main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/catalogo"
+        android:textSize="20dp"
+        android:background="@color/App4Main"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/catalogo" />
+
+    <TextView
+        android:id="@+id/principal"
+        android:textSize="20dp"
+        android:background="@color/App4Sub"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/principal_catalogo" />
+
+    <CheckBox
+        android:id="@+id/meat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/meat"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/chicken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chicken"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/bacon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bacon"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/veggie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/veggie"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/acompanhamento"
+        android:background="@color/App4Sub"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="@string/acompanhamento_catalogo" />
+
+    <CheckBox
+        android:id="@+id/fries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/french_fries"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/nuggets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nuggets"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/salad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/salad"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/bebidas"
+        android:background="@color/App4Sub"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="@string/bebida_catalogo" />
+
+    <CheckBox
+        android:id="@+id/water"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/water"
+        android:textSize="18dp" />
+
+    <CheckBox
+        android:id="@+id/cola"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cola"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu nome"
+        android:textSize="16sp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/confirmarPedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Pedido"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/App4Main"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

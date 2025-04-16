@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Questão 1 -->
+    <string name="Titulo1">Sistema de compras</string>
+    <string name="Subtitulo1">Escolha os produtos que deseja levar</string>
+    <string name="option1">Arroz 1 kg (R$2,69)</string>
+    <string name="option2">Leite Longa vida (R$2,70)</string>
+    <string name="option3">Carne Friboi (R$16,70)</string>
+    <string name="option4">Feijão carioquinha 1kg (R$3,38)</string>
+    <string name="option5">Arroz 1 kg (R$2,69)</string>
+    <color name="bgcolor1">#333333</color>
+    <color name="headercolor1">#e02a4a</color>
+    <color name="optcolor">#8c8c8c</color>
+    <string name="Calcular1">Calcular</string>
+    <string name="Resultado1">Total: </string>
+
+    <!-- Questão 2 -->
+    <string name="Titulo2">Calcule o seu novo salário</string>
+    <string name="Wage">Digite o seu salário atual (R$) </string>
+    <string name="Subtitulo2">Qual será o percentual?</string>
+    <string name="porcentagem1">40%</string>
+    <string name="porcentagem2">45%</string>
+    <string name="porcentagem3">50%</string>
+    <string name="Calcular2">Calcular</string>
+    <string name="Resultado2">Seu novo salário</string>
+
+    <!-- QQuestão 3 -->
+    <string name="Titulo3">Bem vindo ao Tem de tudo!</string>
+    <string name="Sugestion1">Gostaria de se cadastrar para receber</string>
+    <string name="Sugestion2"> nossas novidades por email?</string>
+    <string name="Cadastrar">Cadastre-se</string>
+    <string name="Info">Preencha seu nome e seu email nos campos abaixo:</string>
+    <color name="subColor">#fdb417</color>
+    <string name="Cadastar2">Cadastrar outra pessoa</string>
+
+    <!-- Questão 4 -->
+    <string name="Titulo4">LANCHE RÁPIDO</string>
+    <string name="subTitulo4">O melhor hamburger da região</string>
+    <string name="fome">Bateu aquela fome?</string>
+    <string name="pedido">Faça o seu pedido</string>
+    <string name="catalogo">Catálogo - Lanche Rápido</string>
+    <string name="principal_catalogo">Principal</string>
+    <string name="meat">X-Burger</string>
+    <string name="chicken">X-Chicken</string>
+    <string name="bacon">X-Bacon</string>
+    <string name="veggie">X-Veggie</string>
+    <string name="acompanhamento_catalogo">Acompanhamento</string>
+    <string name="french_fries">Fritas</string>
+    <string name="nuggets">Nuggets</string>
+    <string name="salad">Salada</string>
+    <string name="bebida_catalogo">Bebidas</string>
+    <string name="water">Água - 500 ml</string>
+    <string name="cola">Coca Cola - 350ml</string>
+    <color name="App4Main">#F57C00</color>
+    <color name="App4Sub">#FFA726</color>
+    <color name="App4Buttons">#FF9800</color>
+
+
+    <string name="choose">Escolha o sabor da sua Pizza:</string>
+    <color name="App5Main">#005f64</color>
+    <color name="App5Sub">#da2414</color>
+    <string name="continuar">Continuar</string>
+    <string name="margherita">Margherita - R$ 67,00</string>
+    <string name="calabresa">Calabresa - R$ 49,00</string>
+    <string name="vegana">Vegana - R$ 53,00</string>
+    <string name="portuguesa">Portuguesa - R$ 56,00</string>
+    <string name="casa">À moda da casa - R$ 62,00</string>
+    <string name="pequena">Pequena</string>
+    <string name="media">Média + R$ 15,00 </string>
+    <string name="grande">Grande + R$ 30,00</string>
+    <string name="tamanho">Escolha o tamanho</string>
+    <string name="pagamento">Escolha o seu método de pagamento</string>
+
+
+
+    <string name="Menu">Voltar para o Menu</string>
+</resources>

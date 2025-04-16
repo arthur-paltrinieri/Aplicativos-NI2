@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:text="Resumo do Pedido"
         android:textAlignment="center"
-        android:textColor="@color/App4Sub"
+        android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

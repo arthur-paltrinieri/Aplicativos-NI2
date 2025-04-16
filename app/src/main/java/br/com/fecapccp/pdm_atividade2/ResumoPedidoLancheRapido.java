@@ -21,14 +21,19 @@ public class ResumoPedidoLancheRapido extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo_pedido_lanche_rapido);
 
+        // Inicializa os componentes
         textoResumo = findViewById(R.id.textoResumo);
+        redirectMenu = findViewById(R.id.redirectMenu);
+        retornarMenu = findViewById(R.id.returnMenu);
 
+        // Obtém os dados da intent
         String nome = getIntent().getStringExtra("nomeUsuario");
         String pedidos = getIntent().getStringExtra("pedidosSelecionados");
 
-        textoResumo.setText(nome + "Pedidos: " + pedidos);
+        // Exibe o resumo
+        textoResumo.setText(nome + " - Pedidos: " + pedidos);
 
-
+        // Configura os listeners dos botões
         redirectMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +41,7 @@ public class ResumoPedidoLancheRapido extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         retornarMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

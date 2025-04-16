@@ -13,20 +13,20 @@ import java.util.ArrayList;
 
 public class ResumoPedidoPizzeria extends AppCompatActivity {
 
-    TextView tipoPizzaResumo, tamanhoResumo, metodoPagamentoResumo, valorTotalResumo, redirectMenu;
-    Button confirmarPagamento;
+    TextView tipoPizzaResumo, tamanhoResumo, metodoPagamentoResumo, valorTotalResumo;
+    Button confirmarPagamento, redirectMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo_pedido_pizzeria);
 
-        // Inicializa componentes
+        // Inicializa todos os componentes
         tipoPizzaResumo = findViewById(R.id.tipoPizzaResumo);
         tamanhoResumo = findViewById(R.id.tamanhoResumo);
         metodoPagamentoResumo = findViewById(R.id.metodoPagamentoResumo);
         valorTotalResumo = findViewById(R.id.valorTotalResumo);
-        confirmarPagamento = findViewById(R.id.button);
+        redirectMenu = findViewById(R.id.redirectMenu); // Adicionado esta linha
 
         Intent intent = getIntent();
         ArrayList<String> pizzasSelecionadas = intent.getStringArrayListExtra("pizzasSelecionadas");
@@ -34,12 +34,14 @@ public class ResumoPedidoPizzeria extends AppCompatActivity {
         String pagamento = intent.getStringExtra("pagamentoSelecionado");
         int valorTotal = intent.getIntExtra("valorTotal", 0);
 
-        // Monta a string de pizzas
+        // Monta a string de pizzas com verificação de null
         StringBuilder pizzasStr = new StringBuilder("Tipo de Pizza: ");
-        for (int i = 0; i < pizzasSelecionadas.size(); i++) {
-            pizzasStr.append(pizzasSelecionadas.get(i));
-            if (i < pizzasSelecionadas.size() - 1) {
-                pizzasStr.append(", ");
+        if (pizzasSelecionadas != null) {
+            for (int i = 0; i < pizzasSelecionadas.size(); i++) {
+                pizzasStr.append(pizzasSelecionadas.get(i));
+                if (i < pizzasSelecionadas.size() - 1) {
+                    pizzasStr.append(", ");
+                }
             }
         }
 
@@ -49,21 +51,19 @@ public class ResumoPedidoPizzeria extends AppCompatActivity {
         metodoPagamentoResumo.setText("Pagamento: " + pagamento);
         valorTotalResumo.setText("Valor Total: R$ " + valorTotal + ",00");
 
-        // Define o listener do botão
+        // Listener do botão de confirmação
         confirmarPagamento.setOnClickListener(v -> {
             Toast.makeText(this, "Pedido confirmado! Seu pedido chegará em breve.", Toast.LENGTH_LONG).show();
-
-            // Volta para a tela inicial
             Intent intent1 = new Intent(this, MenuPizzeria.class);
             startActivity(intent1);
             finish();
         });
-        redirectMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(ResumoPedidoPizzeria.this, MainActivity.class);
-                startActivity(intent2);
-            }
+
+        // Listener do botão de redirecionamento
+        redirectMenu.setOnClickListener(v -> {
+            Intent intent2 = new Intent(ResumoPedidoPizzeria.this, MainActivity.class);
+            startActivity(intent2);
+            finish(); // Adicionado para limpar a pilha de atividades
         });
     }
 }
